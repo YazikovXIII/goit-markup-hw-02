@@ -1,0 +1,110 @@
+/*
+Portfolio.html classes
+
+<div class="logo-link">
+<a class="link" href="./index.html">
+<ul class="list">
+<a class="nav-link"
+.logo-link-footer
+.web .studio  .studiofooter 
+*/
+
+body {
+	background-color: #f5f5f5;
+	font-family: "Roboto", sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #434455;
+}
+/* webstudio logo */
+.logo-link-footer {
+	background-color: #2e2f42;
+	color: #ffffff;
+}
+.web {
+	color: #4d5ae5;
+	font-family: Raleway;
+}
+.studio {
+	color: #434455;
+	font-family: Raleway;
+}
+.studiofooter {
+	color: #ffffff;
+	font-family: Raleway;
+}
+
+.listoflinks,
+.adress {
+	color: rgba(0, 0, 0, 0);
+}
+
+.nav-link {
+	color: #2e2f42;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+}
+.nav-link:hover,
+.nav-link:focus {
+	color: #434455;
+}
+.adresslink {
+	font-weight: 400;
+}
+
+a {
+	text-decoration: none;
+	color: #2e2f42;
+}
+
+h1,
+h2 {
+	color: rgba(0, 0, 0, 0);
+}
+
+.listofbuttons {
+	color: rgba(0, 0, 0, 0);
+}
+
+.nav-button-all,
+.nav-button-web,
+.nav-button-app,
+.nav-button-design,
+.nav-button-marketing {
+	color: #4d5ae5;
+	background-color: #f4f4fd;
+	border: 1px solid #e7e9fc;
+	border-radius: 4px;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.nav-button-all:hover,
+.nav-button-all:focus,
+.nav-button-web:hover,
+.nav-button-web:focus,
+.nav-button-app:hover,
+.nav-button-app:focus,
+.nav-button-design:hover,
+.nav-button-design:focus,
+.nav-button-marketing:hover,
+.nav-button-marketing:focus {
+	color: #ffffff;
+	background-color: #4d5ae5;
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+}
+
+.products-list {
+	color: rgba(0, 0, 0, 0);
+}
