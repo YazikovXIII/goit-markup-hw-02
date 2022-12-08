@@ -1,39 +1,66 @@
 /*
-Portfolio.html classes
+Raleway зробив 800
+заяві div наче прибрав
+ієрархію h1-h2-h3 змінив у портфоліо,але в студії після h1 ідуть h3,але є більш значний h2
+CSS змінні зробив і наче всюди замінив на сolor var
+line-heigt змінив на відносні
+селектори тегів змінив на селектори классів
+У Хедер видалив бєкгоаунд колор
+?????
+Visited зробив усі посилання purple,може через те що використовую #
+Не змінюється рамка до кнопки Оrder service
+?????
 
-<div class="logo-link">
-<a class="link" href="./index.html">
-<ul class="list">
-<a class="nav-link"
-.logo-link-footer
-.web .studio  .studiofooter 
 */
+:root {
+	--iris: #4d5ae5;
+	--navy-blue: #2e2f42;
+	--green: #31d0aa;
+	--slate: #434455;
+	--light-slate: #8e8f99;
+	--cornflower: #e7e9fc;
+	--cloud: #f4f4fd;
+	--order-button-normal: #4d5ae5;
+	--order-button-hover: #4d5ae5;
+	--order-button-click: #404bbf;
+	--blank: #ffffff;
+}
 
 body {
-	background-color: #f5f5f5;
+	background-color: var(--blank);
 	font-family: "Roboto", sans-serif;
-	font-style: normal;
-	font-weight: 400;
 	font-size: 16px;
-	line-height: 24px;
-	color: #434455;
+	line-height: 1.5;
+	color: var(--slate);
 }
 /* webstudio logo */
 .logo-link-footer {
-	background-color: #2e2f42;
-	color: #ffffff;
+	background-color: var(--navy-blue);
+	color: var(--blank);
 }
 .web {
-	color: #4d5ae5;
-	font-family: Raleway;
+	color: var(--iris);
+	font-family: Raleway, sans-serif;
+	font-size: 18px;
+	line-height: 1.2;
 }
 .studio {
-	color: #434455;
-	font-family: Raleway;
+	color: var(--slate);
+	font-family: Raleway, sans-serif;
+	font-size: 18px;
+	line-height: 1.2;
 }
 .studiofooter {
-	color: #ffffff;
-	font-family: Raleway;
+	color: var(--blank);
+	font-family: Raleway, sans-serif;
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+.nav-link:visited,
+.product-link:visited,
+.adress-link:visited {
+	color: purple;
 }
 
 .listoflinks,
@@ -43,66 +70,97 @@ body {
 
 .nav-link {
 	color: #2e2f42;
-	font-family: "Roboto";
-	font-style: normal;
-	font-weight: 600;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 1.5;
 }
+.adress-link:hover,
+.adress-link:focus,
 .nav-link:hover,
 .nav-link:focus {
-	color: #434455;
-}
-.adresslink {
-	font-weight: 400;
+	color: var(--light-slate);
 }
 
 header {
-    background-color: #ffffff;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
-a {
+.link,
+.adress-link,
+.nav-link,
+.product-link {
 	text-decoration: none;
-	color: #2e2f42;
+	color: var(--navy-blue);
 }
 
+.listofbuttons,
+.products-list,
+.list-section,
 .invisible-head-one,
 .invisible-head-two {
 	color: rgba(0, 0, 0, 0);
 }
 
 .studio-hero {
-    background-color: #434455;
+	background-color: var(--slate);
 }
 .studio-hero-header {
-    color: #ffffff;
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 600;
-font-size: 56px;
-line-height: 60px;
+	color: var(--blank);
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+	font-size: 56px;
+	line-height: 1.1;
 }
 
-.listofbuttons {
-	color: rgba(0, 0, 0, 0);
+.list-header {
+	color: var(--navy-blue);
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.2;
+}
+.list-item {
+	color: var(--navy-blue);
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.our-team {
+	background-color: var(--cloud);
+}
+
+.button-order-service {
+	background: var(--order-button-normal);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	color: var(--blank);
+}
+.button-order-service:hover {
+	background: var(--order-button-hover);
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 4px;
+	cursor: pointer;
+}
+.button-order-service:active {
+	background: var(--order-button-click);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 .nav-button-all,
 .nav-button-web,
 .nav-button-app,
 .nav-button-design,
-.nav-button-marketing,
-.button-order-service {
-	color: #4d5ae5;
-	background-color: #f4f4fd;
+.nav-button-marketing {
+	color: var(--order-button-normal);
+	background-color: var(--cloud);
 	border: 1px solid #e7e9fc;
 	border-radius: 4px;
-	font-family: "Roboto";
-	font-style: normal;
-	font-weight: 600;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
 	font-size: 16px;
-	line-height: 24px;
+	line-height: 1.5;
 }
 
 .nav-button-all:hover,
@@ -114,21 +172,17 @@ line-height: 60px;
 .nav-button-design:hover,
 .nav-button-design:focus,
 .nav-button-marketing:hover,
-.nav-button-marketing:focus,
-.button-order-service:hover,
-.button-order-service:focus {
-	color: #ffffff;
-	background-color: #4d5ae5;
+.nav-button-marketing:focus {
+	color: var(--blank);
+	background-color: var(--order-button-normal);
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
 	cursor: pointer;
 	border: none;
 }
 
-.products-list {
-	color: rgba(0, 0, 0, 0);
-}
-
-.section-2, .section-3 {
-    background-color: #ffffff;
+.our-team-text {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 1.1;
 }
