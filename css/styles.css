@@ -6,10 +6,17 @@ CSS змінні зробив і наче всюди замінив на сolor 
 line-heigt змінив на відносні
 селектори тегів змінив на селектори классів
 У Хедер видалив бєкгоаунд колор
-?????
-Visited зробив усі посилання purple,може через те що використовую #
-Не змінюється рамка до кнопки Оrder service
-?????
+
+
+Зробив h2 прихований у студіі
+прибрав тіні
+видалив visited
+Змінив колір hover,focus,active 
+Вказав font-family: inharit для кнопки
+Картинку взяв з 6-го ДЗ
+
+Ви минулого разу сказали про зміну кольору посилань на фіолетовий і я зплутався,гадав що треба зробити візітед,а ви певно мали на увази ховер,фокус,ектів
+
 
 */
 :root {
@@ -57,41 +64,39 @@ body {
 	line-height: 1.2;
 }
 
-.nav-link:visited,
-.product-link:visited,
-.adress-link:visited {
-	color: purple;
-}
-
 .listoflinks,
 .adress {
 	color: rgba(0, 0, 0, 0);
 }
 
 .nav-link {
-	color: #2e2f42;
+	color: var(--navy-blue);
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
 }
+.adress-link {
+	color: var(--navy-blue);
+}
 .adress-link:hover,
-.adress-link:focus,
+.adress-link:focus {
+	color: var(--order-button-normal);
+}
+
 .nav-link:hover,
 .nav-link:focus {
-	color: var(--light-slate);
+	color: var(--slate);
 }
-
-header {
-	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+.nav-link:active {
+	color: var(--iris);
 }
-
 .link,
 .adress-link,
 .nav-link,
 .product-link {
 	text-decoration: none;
-	color: var(--navy-blue);
+	list-style: none;
 }
 
 .listofbuttons,
@@ -113,13 +118,15 @@ header {
 	line-height: 1.1;
 }
 
-.list-header {
+.list-header,
+.product-name {
 	color: var(--navy-blue);
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 1.2;
 }
-.list-item {
+.list-item,
+.product-type {
 	color: var(--navy-blue);
 	font-size: 16px;
 	line-height: 1.5;
@@ -131,19 +138,19 @@ header {
 
 .button-order-service {
 	background: var(--order-button-normal);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	font-family: inherit;
 	border-radius: 4px;
 	color: var(--blank);
 }
 .button-order-service:hover {
 	background: var(--order-button-hover);
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	font-family: inherit;
 	border-radius: 4px;
 	cursor: pointer;
 }
 .button-order-service:active {
 	background: var(--order-button-click);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	font-family: inherit;
 	border-radius: 4px;
 	cursor: pointer;
 }
