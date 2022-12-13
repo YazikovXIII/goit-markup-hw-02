@@ -16,9 +16,19 @@ line-heigt змінив на відносні
 Картинку взяв з 6-го ДЗ
 
 Ви минулого разу сказали про зміну кольору посилань на фіолетовий і я зплутався,гадав що треба зробити візітед,а ви певно мали на увази ховер,фокус,ектів
-
-
 */
+
+/* total */
+
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 :root {
 	--iris: #4d5ae5;
 	--navy-blue: #2e2f42;
@@ -33,6 +43,23 @@ line-heigt змінив на відносні
 	--blank: #ffffff;
 }
 
+.link {
+	text-decoration: none;
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+}
+
 body {
 	background-color: var(--blank);
 	font-family: "Roboto", sans-serif;
@@ -40,7 +67,34 @@ body {
 	line-height: 1.5;
 	color: var(--slate);
 }
-/* webstudio logo */
+
+button {
+	font-family: inherit;
+	cursor: pointer;
+}
+
+img {
+	display: block;
+}
+
+.container {
+	width: 1158px;
+	padding: 0 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* top-line */
+
+header .container {
+	display: flex;
+}
+/* logo */
+
+.logo {
+	margin: 24px 77px 24px 0;
+	/* outline: 1px solid tomato; */
+}
 .logo-link-footer {
 	background-color: var(--navy-blue);
 	color: var(--blank);
@@ -63,27 +117,26 @@ body {
 	font-size: 18px;
 	line-height: 1.2;
 }
-
-.listoflinks,
-.adress {
-	color: rgba(0, 0, 0, 0);
+/* navigation */
+.navigation-list {
+	display: flex;
 }
-
+/* .navinline {
+	outline: 1px solid tomato;
+} */
 .nav-link {
 	color: var(--navy-blue);
 	font-family: "Roboto", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	display: block;
 }
-.adress-link {
-	color: var(--navy-blue);
+.nav-list-item:not(:last-child) {
+	margin-right: 40px;
 }
-.adress-link:hover,
-.adress-link:focus {
-	color: var(--order-button-normal);
-}
-
 .nav-link:hover,
 .nav-link:focus {
 	color: var(--slate);
@@ -91,56 +144,61 @@ body {
 .nav-link:active {
 	color: var(--iris);
 }
-.link,
-.adress-link,
-.nav-link,
-.product-link {
-	text-decoration: none;
-	list-style: none;
+
+/* adress */
+.adress-list {
+	display: flex;
+}
+.adress-link {
+	color: var(--navy-blue);
+	padding-top: 24px;
+	padding-bottom: 24px;
+	display: block;
+}
+.adress-list-item:not(:last-child) {
+	margin-left: 331px;
+	margin-right: 40px;
 }
 
-.listofbuttons,
-.products-list,
-.list-section,
-.invisible-head-one,
-.invisible-head-two {
-	color: rgba(0, 0, 0, 0);
+.adress-link :hover,
+.adress-link :focus {
+	color: var(--order-button-normal);
+}
+
+/* hero */
+.studio-hero .container {
+	display: block;
 }
 
 .studio-hero {
 	background-color: var(--slate);
+	text-align: center;
+	padding-top: 192px;
+	padding-bottom: 192px;
 }
 .studio-hero-header {
 	color: var(--blank);
 	font-family: "Roboto", sans-serif;
-	font-weight: 500;
+	font-weight: 700;
 	font-size: 56px;
 	line-height: 1.1;
-}
-
-.list-header,
-.product-name {
-	color: var(--navy-blue);
-	font-weight: 600;
-	font-size: 20px;
-	line-height: 1.2;
-}
-.list-item,
-.product-type {
-	color: var(--navy-blue);
-	font-size: 16px;
-	line-height: 1.5;
-}
-
-.our-team {
-	background-color: var(--cloud);
+	margin-bottom: 48px;
 }
 
 .button-order-service {
+	display: block;
 	background: var(--order-button-normal);
 	font-family: inherit;
 	border-radius: 4px;
 	color: var(--blank);
+	border-radius: 4%;
+	cursor: pointer;
+	display: block;
+	min-width: 170px;
+	margin: 0 auto;
+	padding: 16px 32px;
+	border: 1px solid transparent;
+	border-radius: 4px;
 }
 .button-order-service:hover {
 	background: var(--order-button-hover);
@@ -155,6 +213,129 @@ body {
 	cursor: pointer;
 }
 
+/* FEATURES */
+.section-1 .container {
+	display: flex;
+}
+
+.invisible-header,
+.invisible-head-one {
+	display: none;
+	color: rgba(0, 0, 0, 0);
+	width: 0%;
+	height: 0%;
+}
+.feature-list {
+	display: flex;
+	margin-top: 120px;
+	margin-bottom: 120px;
+}
+.list-item:not(:last-child) {
+	margin-right: 24px;
+}
+.list-text {
+	font-size: 16px;
+	line-height: calc(16 24);
+	letter-spacing: 0.02em;
+}
+
+/* what are we doing */
+
+.what-text {
+	display: block;
+	text-align: center;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.1;
+	margin-bottom: 72px;
+}
+.what-list {
+	display: flex;
+}
+.what-list-item:not(:last-child) {
+	margin-right: 24px;
+}
+
+.list-header {
+	color: var(--navy-blue);
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 1.2;
+	padding-bottom: 8px;
+	letter-spacing: 0.02em;
+}
+.list-text {
+	color: var(--navy-blue);
+	font-size: 16px;
+	line-height: 1.5;
+}
+.section-2 {
+	margin-bottom: 120px;
+}
+/* our team */
+.our-team {
+	background-color: var(--cloud);
+}
+.our-team-text {
+	display: block;
+	text-align: center;
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 1.1;
+	padding-top: 120px;
+}
+.team-list {
+	display: flex;
+	padding-bottom: 120px;
+}
+.team-member:not(:last-child) {
+	margin-right: 24px;
+}
+
+.team-member {
+	margin-top: 72px;
+}
+.team-content {
+	padding: 32px 0;
+	background-color: var(--blank);
+	text-align: center;
+}
+
+/* footer */
+
+.logo-footer {
+	font-size: 18px;
+	line-height: calc(18 21);
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+}
+.footer-content {
+	padding-top: 138px;
+
+	padding-bottom: 100px;
+}
+
+/* portfolio */
+
+.top-line-portfolio {
+	box-shadow: 0 0 1px 0 rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+.button-list {
+	display: flex;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-button-all,
+.nav-button-web,
+.nav-button-app,
+.nav-button-design {
+	margin-right: 24px;
+}
 .nav-button-all,
 .nav-button-web,
 .nav-button-app,
@@ -168,6 +349,9 @@ body {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 1.5;
+	padding: 8px 16px;
+	margin-top: 96px;
+	margin-bottom: 72px;
 }
 
 .nav-button-all:hover,
@@ -187,9 +371,38 @@ body {
 	cursor: pointer;
 	border: none;
 }
+.products-list,
+.products-list2,
+.products-list3 {
+	display: flex;
+}
+.products-list3 {
+	margin-bottom: 120px;
+}
+.product-list-item:not(:last-child) {
+	margin-right: 24px;
+}
+.product-list-item {
+	margin-bottom: 48px;
+	border: 0.5px solid #f4f4fd;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
-.our-team-text {
+.product-name {
+	color: var(--navy-blue);
 	font-weight: 600;
-	font-size: 36px;
-	line-height: 1.1;
+	font-size: 20px;
+	line-height: 1.2;
+	letter-spacing: 0.02em;
+}
+
+.product-type {
+	color: var(--navy-blue);
+	font-size: 16px;
+	line-height: 1.5;
+}
+.product-content {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	padding-left: 16px;
 }
