@@ -1,3 +1,23 @@
+/*
+Raleway зробив 800
+заяві div наче прибрав
+ієрархію h1-h2-h3 змінив у портфоліо,але в студії після h1 ідуть h3,але є більш значний h2
+CSS змінні зробив і наче всюди замінив на сolor var
+line-heigt змінив на відносні
+селектори тегів змінив на селектори классів
+У Хедер видалив бєкгоаунд колор
+
+
+Зробив h2 прихований у студіі
+прибрав тіні
+видалив visited
+Змінив колір hover,focus,active 
+Вказав font-family: inharit для кнопки
+Картинку взяв з 6-го ДЗ
+
+Ви минулого разу сказали про зміну кольору посилань на фіолетовий і я зплутався,гадав що треба зробити візітед,а ви певно мали на увази ховер,фокус,ектів
+*/
+
 /* total */
 
 html {
@@ -128,6 +148,7 @@ header .container {
 /* adress */
 .adress-list {
 	display: flex;
+	margin-left: auto;
 }
 .adress-link {
 	color: var(--navy-blue);
@@ -196,6 +217,7 @@ header .container {
 /* FEATURES */
 .section-1 .container {
 	display: flex;
+	padding: 0;
 }
 
 .invisible-header,
@@ -207,8 +229,8 @@ header .container {
 }
 .feature-list {
 	display: flex;
-	margin-top: 120px;
-	margin-bottom: 120px;
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 .list-item:not(:last-child) {
 	margin-right: 24px;
@@ -241,7 +263,7 @@ header .container {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 1.2;
-	padding-bottom: 8px;
+	margin-bottom: 8px;
 	letter-spacing: 0.02em;
 }
 .list-text {
@@ -255,6 +277,8 @@ header .container {
 /* our team */
 .our-team {
 	background-color: var(--cloud);
+	padding-top: 120px;
+	padding-bottom: 120px;
 }
 .our-team-text {
 	display: block;
@@ -262,18 +286,16 @@ header .container {
 	font-weight: 600;
 	font-size: 36px;
 	line-height: 1.1;
-	padding-top: 120px;
 }
 .team-list {
 	display: flex;
-	padding-bottom: 120px;
+	margin-top: 72px;
 }
 .team-member:not(:last-child) {
 	margin-right: 24px;
 }
 
 .team-member {
-	margin-top: 72px;
 }
 .team-content {
 	padding: 32px 0;
@@ -292,31 +314,41 @@ header .container {
 	text-transform: uppercase;
 }
 .footer-content {
-	padding-top: 138px;
+	padding-top: 100px;
 
 	padding-bottom: 100px;
 }
 
+.logo-footer {
+	margin-top: 0;
+}
+
 /* portfolio */
 
-/* top-line */
 .top-line-portfolio {
 	box-shadow: 0 0 1px 0 rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
-/* navigation */
+
+.portfolio {
+	padding-top: 96px;
+	padding-bottom: 120px;
+}
 .button-list {
 	display: flex;
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 72px;
 }
-
-.nav-button-all,
+.button-item:not(:last-child) {
+	margin-right: 24px;
+}
+/* .nav-button-all,
 .nav-button-web,
 .nav-button-app,
 .nav-button-design {
 	margin-right: 24px;
-}
+} */
 .nav-button-all,
 .nav-button-web,
 .nav-button-app,
@@ -331,8 +363,6 @@ header .container {
 	font-size: 16px;
 	line-height: 1.5;
 	padding: 8px 16px;
-	margin-top: 96px;
-	margin-bottom: 72px;
 }
 
 .nav-button-all:hover,
@@ -352,8 +382,23 @@ header .container {
 	cursor: pointer;
 	border: none;
 }
-/* products */
-.products-list,
+
+.products-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.product-list-item {
+	margin-right: 24px;
+	margin-bottom: 24px;
+}
+.product-list-item:nth-child(3n) {
+	margin-right: 0;
+}
+.product-list-item:nth-last-child(-n + 3) {
+	margin-bottom: 0;
+}
+
+/* .products-list,
 .products-list2,
 .products-list3 {
 	display: flex;
@@ -366,9 +411,8 @@ header .container {
 }
 .product-list-item {
 	margin-bottom: 48px;
-	border: 0.5px solid #f4f4fd;
-	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
+	
+} */
 
 .product-name {
 	color: var(--navy-blue);
@@ -384,7 +428,11 @@ header .container {
 	line-height: 1.5;
 }
 .product-content {
+	width: 360px;
 	padding-top: 32px;
 	padding-bottom: 32px;
 	padding-left: 16px;
+	border: 0.5px solid #f4f4fd;
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+	border-top: 0;
 }
